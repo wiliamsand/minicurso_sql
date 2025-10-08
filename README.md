@@ -40,22 +40,11 @@ O minicurso utiliza uma base de dados fictícia chamada **LojaTech**, que simula
 
 ## 🚀 Como Usar
 
-### 1. Configuração do Ambiente
-
-```sql
--- Definir o schema de trabalho
-SET search_path TO lojatech;
-```
-
-### 2. Criação da Base de Dados
+### 1. Criação da Base de Dados
 
 Execute o arquivo `criacao_base.sql` para criar todas as tabelas e inserir os dados de exemplo:
 
-```bash
-psql -U seu_usuario -d sua_base < criacao_base.sql
-```
-
-### 3. Executar as Consultas
+### 2. Executar as Consultas
 
 O arquivo `consultas.sql` está organizado em seções progressivas:
 
