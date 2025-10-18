@@ -65,7 +65,30 @@ SELECT nome, preco FROM produtos WHERE preco > 500;
 SELECT nome, preco FROM produtos WHERE nome ILIKE '%SSD%';
 ```
 
-### 🟡 **Consultas Intermediárias**
+### � **Operações de Manipulação de Dados (DML)**
+- INSERT - Inserção de novos registros
+- UPDATE - Atualização de registros existentes
+- DELETE - Remoção de registros
+- Operações combinadas e transações
+
+**Exemplos:**
+```sql
+-- Inserir um novo cliente
+INSERT INTO clientes (nome, email, telefone, cidade, estado)
+VALUES ('Fernando Oliveira', 'fernando.oliveira@email.com', '51999990006', 'Pelotas', 'RS');
+
+-- Atualizar preço de um produto
+UPDATE produtos
+SET preco = 3299.90
+WHERE nome = 'Notebook Lenovo IdeaPad 3';
+
+-- Deletar produtos inativos sem vendas
+DELETE FROM produtos
+WHERE ativo = FALSE 
+AND id NOT IN (SELECT DISTINCT produto_id FROM itens_venda);
+```
+
+### �🟡 **Consultas Intermediárias**
 - JOINs (INNER, LEFT)
 - Funções de agregação (COUNT, SUM, AVG)
 - Agrupamento com GROUP BY
